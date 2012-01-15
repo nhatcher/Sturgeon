@@ -4,7 +4,10 @@ STEP01
 There are two programs in this directory:
 
 step01.R
+
 step01.py
+
+step01.cpp
 
 The second is a python translation of the former.
 To run the first program:
@@ -15,7 +18,7 @@ to run the python program
 
 ``python step01.py``
 
-Should work in all systems.
+Should work in all systems. Ask me if you need to compile and run the cpp program.
 
 BENCHMARKS
 ==========
@@ -30,7 +33,12 @@ In my computer (linux 64 with 2Gb RAM )
 
 ``real    0m0.047s``
 
-Which mean that python is 60 times faster than R. Of course this means very little, if anything.
+``time ./step01``
+
+``real    0m0.005s``
+
+
+Which mean that python is 60 times faster than R and C++ 10 times faster that python (~600 faster that R). Of course this means very little, if anything.
 
 DESCRIPTION
 ===========

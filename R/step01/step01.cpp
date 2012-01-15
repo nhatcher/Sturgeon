@@ -1,8 +1,13 @@
+/*
+ Translation of the original step01.R into C++
+*/
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <iomanip>
+
 using namespace std;
+
 void loadFileAsVector (vector <double> &fl, const char* str) {
   ifstream readFile(str);
   while (!readFile.eof()) {
@@ -13,18 +18,21 @@ void loadFileAsVector (vector <double> &fl, const char* str) {
   fl.pop_back();
   readFile.close();
 }
+
 void multiply (vector <double> &result, vector <double> &left, vector <double> &right) {
   result.clear();
   for (int i=0; i<left.size(); i++) {
     result.push_back(left[i]*right[i]);
   }
 }
+
 void multiply (vector <double> &result, vector <double> &left, double dl) {
   result.clear();
   for (int i=0; i<left.size(); i++) {
     result.push_back(left[i]*dl);
   }
 }
+
 double sum (vector <double> &v) {
   double result = 0;
   for (int i=0; i<v.size(); i++) {
@@ -32,6 +40,7 @@ double sum (vector <double> &v) {
   }
   return result;
 }
+
 double sum15 (vector <double> &v) {
   double result = 0;
   for (int i=14; i<v.size(); i++) {
@@ -39,6 +48,7 @@ double sum15 (vector <double> &v) {
   }
   return result;
 }
+
 int main() {
   vector <double> surv;
   vector <double> fecund;
